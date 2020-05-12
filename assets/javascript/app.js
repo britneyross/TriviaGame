@@ -72,6 +72,7 @@ $(document).ready(function () {
         correctanswer = 0;
         incorrectanswer = 0;
         questions();
+        startTimer();
     };
 
     function questions() {
@@ -85,13 +86,9 @@ $(document).ready(function () {
                     $("#question").append(`<button class="no"> ${trivia[i].choices[j]} </button>`)
 
                 }
-
-
             }
-
         }
         checkQuestions()
-
     }
 
 
@@ -106,41 +103,58 @@ $(document).ready(function () {
             console.log(incorrectanswer)
         });
 
-    }
-
-    function timeLeft(){
-        seconds = 20;
-        $("#countdown").html("<h2>Time Remaining: " + seconds + "<h2>");
-        if(seconds < 1){
-            answers = true;
-            time = setInterval (count, 1000);
-        }
-    };
-
-    function count(){
-        seconds --; 
+        
 
     }
+
+    function startTimer() {
+        var counter = 10;
+        var timerCountdown = setInterval(function () {
+            console.log(counter);
+
+            document.querySelector('#countdown').innerHTML = counter;
+            counter--
+            if (counter < 0) {
+                alert("Time's up!");
+                displayResults();
+                clearInterval(timerCountdown);
+            }
+
+            
+        }, 1000);
+
+        $("#endGame").click(function () {
+            displayResults();
+            clearInterval(timerCountdown);
+        });
+    }
+
+    function displayResults() {
+        var question_div = document.getElementById("question");
+
+        question_div.style.display = "none";
+        var countdown_div = document.getElementById("countdown");
+        countdown_div.style.display = "none";
+        var endgame_div = document.getElementById("endGame");
+        endgame_div.style.display = "none";
+
+        var correct_p = document.createElement("p");                 
+        var correct_node= document.createTextNode(`Number of correct questions: ${correctanswer}`);       
+        correct_p.appendChild(correct_node);                              
+        document.getElementById("stats").appendChild(correct_p);
+
+        var incorrect_p = document.createElement("p");                 
+        var incorrect_node= document.createTextNode(`Number of incorrect questions: ${incorrectanswer}`);       
+        incorrect_p.appendChild(incorrect_node);                              
+        document.getElementById("stats").appendChild(incorrect_p);
+
+
+
+    }
+
+
+
+
 })
 
-
-
-    /*
-    //  Start on click.
-    $("#beginGame").on("click", function () {
-        //  Set the button alert's timeout to run ten seconds after the function's called.
-        delayButtonAlert = setTimeout(function () {
-            alert("Time's up!");
-        }, 10000);
-    });
-});
-
-
-    function timeUp() {
-        // in the element with an id of time-left add an h2 saying Time's Up!
-        // console log done
-        console.log("done");
-        $("#time-left").append("<h2>Time's Up!</h2>");
-        console.log("time is up");
-    })*/
 

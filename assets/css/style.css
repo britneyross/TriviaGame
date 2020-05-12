@@ -4,8 +4,8 @@ header{
 }
 
 #begingame {
-    padding: 20px;
-    font-size: 24px;
+    padding: 15px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 50px;
     color: blue;
@@ -16,4 +16,9 @@ header{
     font-size: 20px;
     font-weight: bold;
     color: blue;
+}
+
+.yes, .no {
+    margin: 2px;
+    padding: 5px;
 }
