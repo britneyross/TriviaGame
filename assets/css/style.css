@@ -1,0 +1,19 @@
+header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: purple;
+}
+
+#begingame {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: blue;
+}
+ 
+#endGame {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
