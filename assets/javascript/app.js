@@ -53,8 +53,6 @@ $(document).ready(function () {
     var timeLeft;
     var correctanswer;
     var incorrectanswer;
-    var noanswer;
-    var seconds;
     $("#endGame").hide();
 
     $("#begingame").on("click", function () {
@@ -102,13 +100,10 @@ $(document).ready(function () {
             incorrectanswer++;
             console.log(incorrectanswer)
         });
-
-        
-
     }
 
     function startTimer() {
-        var counter = 10;
+        var counter = 45;
         var timerCountdown = setInterval(function () {
             console.log(counter);
 
@@ -118,9 +113,7 @@ $(document).ready(function () {
                 alert("Time's up!");
                 displayResults();
                 clearInterval(timerCountdown);
-            }
-
-            
+            }            
         }, 1000);
 
         $("#endGame").click(function () {
@@ -147,13 +140,7 @@ $(document).ready(function () {
         var incorrect_node= document.createTextNode(`Number of incorrect questions: ${incorrectanswer}`);       
         incorrect_p.appendChild(incorrect_node);                              
         document.getElementById("stats").appendChild(incorrect_p);
-
-
-
     }
-
-
-
 
 })
 
