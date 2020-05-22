@@ -22,3 +22,9 @@ header{
     margin: 2px;
     padding: 5px;
 }
+
+#countdown {
+    font-size: 20px;
+    color: blue;
+    font-weight: bold;
+}

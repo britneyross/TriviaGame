@@ -106,8 +106,7 @@ $(document).ready(function () {
         var counter = 45;
         var timerCountdown = setInterval(function () {
             console.log(counter);
-
-            document.querySelector('#countdown').innerHTML = counter;
+            document.querySelector('#countdown').innerHTML = ("Timer: " + counter + " seconds");
             counter--
             if (counter < 0) {
                 alert("Time's up!");
