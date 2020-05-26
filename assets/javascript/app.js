@@ -17,7 +17,7 @@ $(document).ready(function () {
             answer: "Pacific",
         },
         {
-            question: "What is the lognest river in the world?",
+            question: "What is the longest river in the world?",
             choices: ["Amazon", "Congo", "Nile", "Hudson"],
             answer: "Nile",
         },
@@ -50,7 +50,6 @@ $(document).ready(function () {
 
     var questionnumber;
     var question;
-    var timeLeft;
     var correctanswer;
     var incorrectanswer;
     $("#endGame").hide();
@@ -93,17 +92,19 @@ $(document).ready(function () {
     function checkQuestions() {
         $(".yes").click(function () {
             correctanswer++;
+            $(this).css('background-color', 'lightblue');
             console.log(correctanswer)
         });
 
         $(".no").click(function () {
             incorrectanswer++;
+            $(this).css('background-color', 'lightblue');
             console.log(incorrectanswer)
         });
     }
 
     function startTimer() {
-        var counter = 45;
+        var counter = 60;
         var timerCountdown = setInterval(function () {
             console.log(counter);
             document.querySelector('#countdown').innerHTML = ("Timer: " + counter + " seconds");
