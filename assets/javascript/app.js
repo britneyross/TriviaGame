@@ -92,7 +92,6 @@ $(document).ready(function () {
                 } else {
                     $("#question").append(`<input type="radio" class="no" id=${trivia[i].choices[j]} name=${trivia[i].group} value=${trivia[i].choices[j]}>`)
                     $("#question").append(`<label for=${trivia[i].choices[j]}>${trivia[i].choices[j]}</label><br></br>`)
-
                 }
             }
         }
@@ -103,19 +102,17 @@ $(document).ready(function () {
     function checkQuestions() {
         $(".yes").click(function () {
             correctanswer++;
-            $(this).css('background-color', 'lightblue');
             console.log(correctanswer)
         });
 
         $(".no").click(function () {
             incorrectanswer++;
-            $(this).css('background-color', 'lightblue');
             console.log(incorrectanswer)
         });
     }
 
     function startTimer() {
-        var counter = 60;
+        var counter = 45;
         var timerCountdown = setInterval(function () {
             console.log(counter);
             document.querySelector('#countdown').innerHTML = ("Timer: " + counter + " seconds");

@@ -1,9 +1,9 @@
 body{
-   
+   background-color: gold;
 }
 
 header{
-   
+text-align: center;
 }
 
 #begingame {
@@ -11,14 +11,29 @@ header{
     font-size: 25px;
     font-weight: bold;
     margin-top: 50px;
-    color: blue;
+    color: rgb(1, 1, 27);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: lightgoldenrodyellow;
+}
+
+#begingame:hover {background-color: red}
+
+#begingame:active {
+  background-color: darkred;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
  
 #endGame {
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: blue;
+    color: white;
+    background-color: rgb(219, 18, 18);
+    width: 25%;
 }
 
 .yes, .no {
@@ -28,7 +43,14 @@ header{
 
 
 #countdown {
-    font-size: 20px;
-    color: blue;
-    font-weight: bold;
+    font-size: 30px;
+    color:rgb(219, 18, 18);
+    font-weight: bolder;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(219, 18, 18);
 }
