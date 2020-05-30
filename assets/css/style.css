@@ -1,6 +1,9 @@
+body{
+   
+}
+
 header{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: purple;
+   
 }
 
 #begingame {
@@ -23,9 +26,6 @@ header{
     padding: 5px;
 }
 
-#button:hover{
-    background-color: rebeccapurple;
-}
 
 #countdown {
     font-size: 20px;
