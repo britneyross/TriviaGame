@@ -1,5 +1,5 @@
 body{
-   background-color: gold;
+   background-color: grey;
 }
 
 header{
@@ -16,7 +16,7 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background-color: lightgoldenrodyellow;
+    background-color: lightyellow;
 }
 
 #begingame:hover {background-color: red}
@@ -52,5 +52,5 @@ p {
     font-size: 30px;
     font-weight: bolder;
     text-align: center;
-    color: rgb(219, 18, 18);
+    color: rgb(224, 224, 30);
 }
